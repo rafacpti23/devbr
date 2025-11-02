@@ -170,7 +170,7 @@ export function ShareButton() {
         <Popover.Trigger asChild>
           <Button disabled={!anyPreviewReady} focused={isOpen} variant="neutral" size="xs">
             <Share2Icon />
-            <span>Share</span>
+            <span>Compartilhar</span>
           </Button>
         </Popover.Trigger>
 
@@ -189,7 +189,9 @@ export function ShareButton() {
                       checked={isSharedDraft}
                       onChange={(e: ChangeEvent<HTMLInputElement>) => setIsSharedDraft(e.target.checked)}
                     />
-                    <span className="block text-sm font-medium group-hover:text-content-primary">Share project</span>
+                    <span className="block text-sm font-medium group-hover:text-content-primary">
+                      Compartilhar projeto
+                    </span>
                   </label>
 
                   {/* Share link input and buttons, no label, right below checkbox */}
@@ -259,7 +261,7 @@ export function ShareButton() {
                         ) : (
                           <ImageIcon />
                         )}
-                        <span>Set Thumbnail</span>
+                        <span>Definir Miniatura</span>
                       </Button>
                     </div>
 
@@ -271,12 +273,12 @@ export function ShareButton() {
                       {shareStatus === 'loading' ? (
                         <>
                           <Spinner className="size-4" />
-                          <span>Saving...</span>
+                          <span>Salvando...</span>
                         </>
                       ) : hasChanges ? (
-                        'Save sharing settings'
+                        'Salvar configurações'
                       ) : (
-                        'Saved'
+                        'Salvo'
                       )}
                     </Button>
                   </div>

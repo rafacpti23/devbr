@@ -49,15 +49,18 @@ type Highlight = {
 const HIGHLIGHTS: Highlight[] = [
   {
     text: 'ai chat',
-    tooltip: 'Unless otherwise configured, Chef will prototype with GPT‑4o mini or GPT‑4.1 nano (limits apply).',
+    tooltip:
+      'Salvo configuração diferente, DevBr criará protótipos com GPT‑4o mini ou GPT‑4.1 nano (limites se aplicam).',
   },
   {
     text: 'collaborative text editor',
     tooltip: (
       <>
-        Chef will use the{' '}
-        <TooltipLink href="https://www.convex.dev/components/prosemirror-sync">Collaborative Text Editor</TooltipLink>{' '}
-        Convex <TooltipLink href="https://www.convex.dev/components">component</TooltipLink>.
+        DevBr usará o{' '}
+        <TooltipLink href="https://www.convex.dev/components/prosemirror-sync">
+          Editor de Texto Colaborativo
+        </TooltipLink>{' '}
+        <TooltipLink href="https://www.convex.dev/components">componente</TooltipLink> do Convex.
       </>
     ),
   },
@@ -264,9 +267,9 @@ export const MessageInput = memo(function MessageInput({
             placeholder={
               chatStarted
                 ? numMessages !== undefined && numMessages > 0
-                  ? 'Request changes by sending another message…'
-                  : 'Send a prompt for a new feature…'
-                : 'What app do you want to serve?'
+                  ? 'Solicite mudanças enviando outra mensagem…'
+                  : 'Envie um prompt para uma nova funcionalidade…'
+                : 'Que aplicação você quer criar?'
             }
             disabled={disabled}
             highlights={HIGHLIGHTS}
@@ -308,35 +311,38 @@ export const MessageInput = memo(function MessageInput({
                 placement="top-start"
               >
                 <div className="ml-3 flex items-center gap-1">
-                  <h2 className="text-sm font-bold">Use a recipe</h2>
-                  <Tooltip tip="Recipes are Chef prompts that add powerful full-stack features to your app." side="top">
+                  <h2 className="text-sm font-bold">Use uma receita</h2>
+                  <Tooltip
+                    tip="Receitas são prompts do DevBr que adicionam funcionalidades full-stack poderosas ao seu app."
+                    side="top"
+                  >
                     <span className="cursor-help text-content-tertiary">
                       <InformationCircleIcon className="size-4" />
                     </span>
                   </Tooltip>
                 </div>
-                <MenuItemComponent action={() => insertTemplate('Make a collaborative text editor that ...')}>
+                <MenuItemComponent action={() => insertTemplate('Crie um editor de texto colaborativo que ...')}>
                   <div className="flex w-full items-center gap-2">
                     <PencilSquareIcon className="size-4 text-content-secondary" />
-                    Make a collaborative text editor
+                    Criar editor de texto colaborativo
                   </div>
                 </MenuItemComponent>
-                <MenuItemComponent action={() => insertTemplate('Add AI chat to ...')}>
+                <MenuItemComponent action={() => insertTemplate('Adicione chat com IA para ...')}>
                   <div className="flex w-full items-center gap-2">
                     <ChatBubbleLeftIcon className="size-4 text-content-secondary" />
-                    Add AI chat
+                    Adicionar chat com IA
                   </div>
                 </MenuItemComponent>
-                <MenuItemComponent action={() => insertTemplate('Add file upload to ...')}>
+                <MenuItemComponent action={() => insertTemplate('Adicione upload de arquivos para ...')}>
                   <div className="flex w-full items-center gap-2">
                     <DocumentArrowUpIcon className="size-4 text-content-secondary" />
-                    Add file upload
+                    Adicionar upload de arquivos
                   </div>
                 </MenuItemComponent>
-                <MenuItemComponent action={() => insertTemplate('Add full text search to ...')}>
+                <MenuItemComponent action={() => insertTemplate('Adicione busca de texto completa para ...')}>
                   <div className="flex w-full items-center gap-2">
                     <MagnifyingGlassIcon className="size-4 text-content-secondary" />
-                    Add full text search
+                    Adicionar busca de texto
                   </div>
                 </MenuItemComponent>
               </MenuComponent>
@@ -358,15 +364,15 @@ export const MessageInput = memo(function MessageInput({
               }
               tip={
                 chefAuthState.kind === 'unauthenticated'
-                  ? 'Please sign in to continue'
+                  ? 'Faça login para continuar'
                   : !selectedTeamSlug
-                    ? 'Please select a team to continue'
+                    ? 'Selecione uma equipe para continuar'
                     : undefined
               }
               onClick={handleClickButton}
               size="xs"
               className="ml-2 h-[1.625rem]"
-              aria-label={isStreaming ? 'Stop' : 'Send'}
+              aria-label={isStreaming ? 'Parar' : 'Enviar'}
               icon={
                 sendMessageInProgress ? (
                   <Spinner className="text-white" />
@@ -585,7 +591,7 @@ const HighlightTooltip = memo(function HighlightTooltip({
 const NewLineShortcut = memo(function NewLineShortcut() {
   return (
     <div className="text-xs text-content-tertiary">
-      <KeyboardShortcut value={['Shift', 'Return']} className="mr-0.5 font-semibold" /> for new line
+      <KeyboardShortcut value={['Shift', 'Return']} className="mr-0.5 font-semibold" /> para nova linha
     </div>
   );
 });
@@ -593,12 +599,12 @@ const NewLineShortcut = memo(function NewLineShortcut() {
 const CharacterWarning = memo(function CharacterWarning() {
   return (
     <Tooltip
-      tip="Chef performs better with shorter prompts. Consider making your prompt more concise or breaking it into smaller chunks."
+      tip="DevBr funciona melhor com prompts mais curtos. Considere tornar seu prompt mais conciso ou dividi-lo em partes menores."
       side="bottom"
     >
       <div className="flex cursor-help items-center text-xs text-content-warning">
         <ExclamationTriangleIcon className="mr-1 size-4" />
-        Prompt exceeds {PROMPT_LENGTH_WARNING_THRESHOLD.toLocaleString()} characters
+        Prompt excede {PROMPT_LENGTH_WARNING_THRESHOLD.toLocaleString()} caracteres
       </div>
     </Tooltip>
   );
@@ -618,7 +624,7 @@ const SignInButton = memo(function SignInButton() {
       icon={<img className="size-4" src="/icons/Convex.svg" alt="Convex" />}
     >
       <>
-        <span>Sign in</span>
+        <span>Entrar</span>
       </>
     </Button>
   );

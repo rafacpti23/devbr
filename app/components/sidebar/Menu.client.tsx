@@ -165,7 +165,7 @@ export const Menu = memo(({ isOpen, onClose }: MenuProps) => {
         <div className="flex size-full flex-1 flex-col overflow-hidden">
           <div className="space-y-3 p-4">
             <Button className="w-fit" href="/" icon={<PlusIcon />}>
-              Start new project
+              Novo projeto
             </Button>
             <div className="relative w-full">
               <TextInput

@@ -38,7 +38,7 @@ export async function loader() {
 export const links: LinksFunction = () => [
   {
     rel: 'icon',
-    href: '/favicon.svg',
+    href: '/devbr-favicon.svg',
     type: 'image/svg+xml',
   },
   { rel: 'stylesheet', href: globalStyles },

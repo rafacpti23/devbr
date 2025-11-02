@@ -61,9 +61,14 @@ export function Header({ hideSidebarIcon = false }: { hideSidebarIcon?: boolean 
             }}
           />
         )}
-        <a href="/">
-          {/* The logo is shifted up slightly, to visually align it with the hamburger icon. */}
-          <img src="/chef.svg" alt="Chef logo" width={72} height={42} className="relative -top-1" />
+        <a href="/" className="flex items-center">
+          <img
+            src="/devbr-logo.svg"
+            alt="DevBr - Desenvolvimento Brasil"
+            width={120}
+            height={48}
+            className="devbr-logo"
+          />
         </a>
         <a
           href="https://github.com/get-convex/chef"
@@ -77,7 +82,7 @@ export function Header({ hideSidebarIcon = false }: { hideSidebarIcon?: boolean 
               fill="currentColor"
             />
           </svg>
-          Star on GitHub
+          ⭐ GitHub
         </a>
       </div>
       <>
@@ -128,11 +133,11 @@ export function Header({ hideSidebarIcon = false }: { hideSidebarIcon?: boolean 
                   <hr />
                   <MenuItemComponent action={handleSettingsClick}>
                     <GearIcon className="text-content-secondary" />
-                    Settings & Usage
+                    Configurações e Uso
                   </MenuItemComponent>
                   <MenuItemComponent action={handleLogout}>
                     <ExitIcon className="text-content-secondary" />
-                    Log out
+                    Sair
                   </MenuItemComponent>
                 </MenuComponent>
               )}

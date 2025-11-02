@@ -1,6 +1,6 @@
 {
-  "name": "chef",
-  "description": "An AI Agent",
+  "name": "devbr",
+  "description": "Agente de IA para Desenvolvimento Full-Stack Brasileiro",
   "private": true,
   "license": "MIT",
   "sideEffects": false,

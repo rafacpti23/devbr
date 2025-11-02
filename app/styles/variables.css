@@ -1,100 +1,111 @@
-/* Convex Tokens */
+/* DevBr Tokens - Cores Lovable */
 :root {
-  --cvx-red-100: rgb(252, 215, 203);
-  --cvx-red-200: rgb(255, 202, 193);
-  --cvx-red-300: rgb(252, 165, 165);
-  --cvx-red-400: rgb(253, 76, 65);
-  --cvx-red-500: rgb(238, 52, 47);
-  --cvx-red-700: rgb(168, 21, 21);
-  --cvx-red-900: rgb(107, 33, 31);
-  --cvx-purple-100: rgb(241, 200, 233);
-  --cvx-purple-200: rgb(232, 180, 220);
-  --cvx-purple-500: rgb(141, 38, 118);
-  --cvx-purple-700: rgb(86, 0, 83);
-  --cvx-purple-900: rgb(113, 36, 96);
-  --cvx-blue-100: rgb(204, 222, 250);
-  --cvx-blue-200: rgb(177, 202, 240);
-  --cvx-blue-500: rgb(7, 78, 232);
-  --cvx-blue-700: rgb(33, 34, 181);
-  --cvx-blue-900: rgb(0, 43, 153);
-  --cvx-cyan-200: rgb(170, 227, 239);
-  --cvx-cyan-500: rgb(7, 192, 232);
-  --cvx-cyan-700: rgb(0, 155, 221);
-  --cvx-cyan-900: rgb(15, 89, 105);
-  --cvx-green-100: rgb(203, 237, 182);
-  --cvx-green-200: rgb(180, 236, 146);
-  --cvx-green-500: rgb(79, 176, 20);
-  --cvx-green-700: rgb(34, 137, 9);
-  --cvx-green-900: rgb(44, 83, 20);
-  --cvx-yellow-50: rgb(254, 252, 232);
-  --cvx-yellow-100: rgb(250, 228, 171);
-  --cvx-yellow-200: rgb(230, 226, 168);
-  --cvx-yellow-500: rgb(243, 176, 28);
-  --cvx-yellow-700: rgb(213, 113, 21);
-  --cvx-yellow-900: rgb(109, 82, 23);
-  --cvx-neutral-1: rgb(222, 226, 234);
-  --cvx-neutral-2: rgb(204, 206, 211);
-  --cvx-neutral-3: rgb(174, 177, 184);
-  --cvx-neutral-4: rgb(151, 154, 164);
-  --cvx-neutral-5: rgb(133, 136, 147);
-  --cvx-neutral-6: rgb(118, 121, 131);
-  --cvx-neutral-7: rgb(103, 106, 116);
-  --cvx-neutral-8: rgb(88, 92, 101);
-  --cvx-neutral-9: rgb(73, 76, 84);
-  --cvx-neutral-10: rgb(57, 60, 66);
-  --cvx-neutral-11: rgb(41, 43, 48);
-  --cvx-neutral-12: rgb(24, 25, 28);
-  --cvx-accent: rgb(63, 82, 149);
-  --cvx-info: rgb(7, 191, 232);
-  --cvx-util-accent: rgb(38, 135, 246);
-  --cvx-util-info: rgb(7, 191, 232);
-  --cvx-util-success: rgb(79, 176, 20);
-  --cvx-util-danger: rgb(238, 52, 47);
-  --cvx-util-warning: rgb(243, 176, 28);
+  --devbr-primary-50: rgb(240, 253, 244);
+  --devbr-primary-100: rgb(220, 252, 231);
+  --devbr-primary-200: rgb(187, 247, 208);
+  --devbr-primary-300: rgb(134, 239, 172);
+  --devbr-primary-400: rgb(74, 222, 128);
+  --devbr-primary-500: rgb(34, 197, 94);
+  --devbr-primary-600: rgb(22, 163, 74);
+  --devbr-primary-700: rgb(21, 128, 61);
+  --devbr-primary-800: rgb(22, 101, 52);
+  --devbr-primary-900: rgb(20, 83, 45);
+
+  --devbr-secondary-50: rgb(248, 250, 252);
+  --devbr-secondary-100: rgb(241, 245, 249);
+  --devbr-secondary-200: rgb(226, 232, 240);
+  --devbr-secondary-300: rgb(203, 213, 225);
+  --devbr-secondary-400: rgb(148, 163, 184);
+  --devbr-secondary-500: rgb(100, 116, 139);
+  --devbr-secondary-600: rgb(71, 85, 105);
+  --devbr-secondary-700: rgb(51, 65, 85);
+  --devbr-secondary-800: rgb(30, 41, 59);
+  --devbr-secondary-900: rgb(15, 23, 42);
+
+  --devbr-accent-50: rgb(255, 247, 237);
+  --devbr-accent-100: rgb(255, 237, 213);
+  --devbr-accent-200: rgb(254, 215, 170);
+  --devbr-accent-300: rgb(253, 186, 116);
+  --devbr-accent-400: rgb(251, 146, 60);
+  --devbr-accent-500: rgb(249, 115, 22);
+  --devbr-accent-600: rgb(234, 88, 12);
+  --devbr-accent-700: rgb(194, 65, 12);
+  --devbr-accent-800: rgb(154, 52, 18);
+  --devbr-accent-900: rgb(124, 45, 18);
+
+  --devbr-success-50: rgb(240, 253, 244);
+  --devbr-success-100: rgb(220, 252, 231);
+  --devbr-success-500: rgb(34, 197, 94);
+  --devbr-success-700: rgb(21, 128, 61);
+  --devbr-success-900: rgb(20, 83, 45);
+
+  --devbr-warning-50: rgb(255, 251, 235);
+  --devbr-warning-100: rgb(254, 243, 199);
+  --devbr-warning-500: rgb(245, 158, 11);
+  --devbr-warning-700: rgb(180, 83, 9);
+  --devbr-warning-900: rgb(120, 53, 15);
+
+  --devbr-error-50: rgb(254, 242, 242);
+  --devbr-error-100: rgb(254, 226, 226);
+  --devbr-error-500: rgb(239, 68, 68);
+  --devbr-error-700: rgb(185, 28, 28);
+  --devbr-error-900: rgb(127, 29, 29);
+
+  /* Mapeamento para compatibilidade */
+  --cvx-accent: var(--devbr-primary-600);
+  --cvx-info: var(--devbr-primary-500);
+  --cvx-util-accent: var(--devbr-primary-500);
+  --cvx-util-info: var(--devbr-primary-400);
+  --cvx-util-success: var(--devbr-success-500);
+  --cvx-util-danger: var(--devbr-error-500);
+  --cvx-util-warning: var(--devbr-warning-500);
 }
 
-/* Convex Tokens Light Theme (from Dashboard) */
+/* DevBr Light Theme - Tema Claro Amigável */
 :root,
 html.light {
-  --cvx-background-brand: rgb(249, 247, 238);
-  --cvx-background-primary: rgb(243, 240, 237);
-  --cvx-background-secondary: rgb(253, 252, 250);
-  --cvx-background-tertiary: rgb(240, 238, 235);
-  --cvx-background-highlight: rgb(254, 252, 232);
-  --cvx-background-success: rgb(203, 237, 182);
-  --cvx-background-warning: rgb(250, 228, 171);
-  --cvx-background-error: rgb(252, 215, 203);
-  --cvx-background-error-secondary: rgb(255, 202, 193);
-  --cvx-content-accent: rgb(48, 106, 207);
-  --cvx-content-success: rgb(34, 137, 9);
-  --cvx-content-warning: rgb(109, 82, 23);
-  --cvx-content-error: rgb(168, 21, 21);
-  --cvx-content-error-secondary: rgb(238, 52, 47);
-  --cvx-content-link: rgb(33, 34, 181);
-  --cvx-border-transparent: rgba(33, 34, 30, 0.14);
-  --cvx-border-selected: rgb(30, 28, 25);
+  --cvx-background-brand: var(--devbr-primary-50);
+  --cvx-background-primary: rgb(255, 255, 255);
+  --cvx-background-secondary: var(--devbr-secondary-50);
+  --cvx-background-tertiary: var(--devbr-secondary-100);
+  --cvx-background-highlight: var(--devbr-accent-50);
+  --cvx-background-success: var(--devbr-success-50);
+  --cvx-background-warning: var(--devbr-warning-50);
+  --cvx-background-error: var(--devbr-error-50);
+  --cvx-background-error-secondary: var(--devbr-error-100);
+  --cvx-content-accent: var(--devbr-primary-600);
+  --cvx-content-success: var(--devbr-success-700);
+  --cvx-content-warning: var(--devbr-warning-700);
+  --cvx-content-error: var(--devbr-error-700);
+  --cvx-content-error-secondary: var(--devbr-error-500);
+  --cvx-content-link: var(--devbr-primary-600);
+  --cvx-border-transparent: rgba(100, 116, 139, 0.15);
+  --cvx-border-selected: var(--devbr-primary-600);
+  --cvx-content-primary: var(--devbr-secondary-900);
+  --cvx-content-secondary: var(--devbr-secondary-600);
 }
 
-/* Convex Tokens Dark Theme (from Dashboard) */
-:root,
+/* DevBr Dark Theme - Tema Escuro Amigável */
 html.dark {
-  --cvx-background-brand: rgb(30, 28, 26);
-  --cvx-background-primary: rgb(30, 28, 26);
-  --cvx-background-secondary: rgb(42, 40, 37);
-  --cvx-background-tertiary: rgb(60, 58, 65);
-  --cvx-background-highlight: rgb(109, 82, 23);
-  --cvx-background-success: rgb(44, 83, 20);
-  --cvx-background-warning: rgb(109, 82, 23);
-  --cvx-background-error: rgb(107, 33, 31);
-  --cvx-background-error-secondary: rgb(168, 21, 21);
-  --cvx-content-accent: rgb(99, 168, 248);
-  --cvx-content-success: rgb(180, 236, 146);
-  --cvx-content-warning: rgb(230, 226, 168);
-  --cvx-content-error: rgb(255, 202, 193);
-  --cvx-content-error-secondary: rgb(253, 76, 65);
-  --cvx-content-link: rgb(177, 202, 240);
-  --cvx-border-transparent: rgba(163, 156, 148, 0.3);
-  --cvx-border-selected: rgb(225, 215, 205);
+  --cvx-background-brand: var(--devbr-secondary-900);
+  --cvx-background-primary: var(--devbr-secondary-900);
+  --cvx-background-secondary: var(--devbr-secondary-800);
+  --cvx-background-tertiary: var(--devbr-secondary-700);
+  --cvx-background-highlight: var(--devbr-accent-900);
+  --cvx-background-success: var(--devbr-success-900);
+  --cvx-background-warning: var(--devbr-warning-900);
+  --cvx-background-error: var(--devbr-error-900);
+  --cvx-background-error-secondary: var(--devbr-error-700);
+  --cvx-content-accent: var(--devbr-primary-400);
+  --cvx-content-success: var(--devbr-success-100);
+  --cvx-content-warning: var(--devbr-warning-100);
+  --cvx-content-error: var(--devbr-error-100);
+  --cvx-content-error-secondary: var(--devbr-error-400);
+  --cvx-content-link: var(--devbr-primary-300);
+  --cvx-border-transparent: rgba(148, 163, 184, 0.2);
+  --cvx-border-selected: var(--devbr-primary-400);
+  --cvx-content-primary: rgb(248, 250, 252);
+  --cvx-content-secondary: var(--devbr-secondary-300);
 }
 
 /* Color Tokens */
@@ -102,8 +113,8 @@ html.dark {
   --bolt-elements-bg-depth-1: var(--cvx-background-secondary);
   --bolt-elements-bg-depth-2: var(--cvx-background-primary);
 
-  --bolt-elements-button-primary-background: var(--cvx-accent);
-  --bolt-elements-button-primary-backgroundHover: color-mix(in srgb, var(--cvx-accent) 80%, transparent);
+  --bolt-elements-button-primary-background: var(--devbr-primary-500);
+  --bolt-elements-button-primary-backgroundHover: var(--devbr-primary-600);
   --bolt-elements-button-primary-text: theme('colors.white');
 
   --bolt-elements-button-secondary-background: var(--cvx-background-secondary);
@@ -145,8 +156,8 @@ html.dark {
 /* Color Tokens Light Theme */
 :root,
 html.light {
-  --bolt-elements-bg-depth-3: theme('colors.gray.200');
-  --bolt-elements-bg-depth-4: theme('colors.gray.900/0.05');
+  --bolt-elements-bg-depth-3: var(--devbr-secondary-100);
+  --bolt-elements-bg-depth-4: var(--devbr-primary-50);
 
   --bolt-elements-code-background: theme('colors.gray.100');
   --bolt-elements-code-text: theme('colors.gray.950');
@@ -192,10 +203,9 @@ html.light {
 }
 
 /* Color Tokens Dark Theme */
-:root,
 html.dark {
-  --bolt-elements-bg-depth-3: theme('colors.gray.800');
-  --bolt-elements-bg-depth-4: theme('colors.white/0.05');
+  --bolt-elements-bg-depth-3: var(--devbr-secondary-700);
+  --bolt-elements-bg-depth-4: var(--devbr-secondary-800);
 
   --bolt-elements-code-background: theme('colors.gray.800');
   --bolt-elements-code-text: theme('colors.white');

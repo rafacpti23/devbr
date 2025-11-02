@@ -1,0 +1,148 @@
+/* DevBr - Tema Personalizado com Cores Amigáveis */
+
+/* Gradientes suaves para o fundo */
+.devbr-gradient-bg {
+  background: linear-gradient(
+    135deg,
+    var(--devbr-primary-50) 0%,
+    var(--devbr-secondary-50) 50%,
+    var(--devbr-accent-50) 100%
+  );
+}
+
+.devbr-gradient-bg-dark {
+  background: linear-gradient(
+    135deg,
+    var(--devbr-secondary-900) 0%,
+    var(--devbr-secondary-800) 50%,
+    var(--devbr-accent-900) 100%
+  );
+}
+
+/* Botões com hover suave */
+.devbr-button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px;
+}
+
+.devbr-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.15);
+}
+
+/* Cards com sombra suave */
+.devbr-card {
+  border-radius: 12px;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.devbr-card:hover {
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Logo com animação suave */
+.devbr-logo {
+  transition: all 0.3s ease;
+}
+
+.devbr-logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Indicadores de status com cores amigáveis */
+.devbr-status-success {
+  color: var(--devbr-success-500);
+  background-color: var(--devbr-success-50);
+  border: 1px solid var(--devbr-success-200);
+}
+
+.devbr-status-warning {
+  color: var(--devbr-warning-700);
+  background-color: var(--devbr-warning-50);
+  border: 1px solid var(--devbr-warning-200);
+}
+
+.devbr-status-error {
+  color: var(--devbr-error-700);
+  background-color: var(--devbr-error-50);
+  border: 1px solid var(--devbr-error-200);
+}
+
+/* Animações suaves */
+@keyframes devbr-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.devbr-fade-in {
+  animation: devbr-fade-in 0.5s ease-out;
+}
+
+/* Scrollbar personalizada */
+.devbr-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.devbr-scrollbar::-webkit-scrollbar-track {
+  background: var(--devbr-secondary-100);
+  border-radius: 4px;
+}
+
+.devbr-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--devbr-primary-300);
+  border-radius: 4px;
+}
+
+.devbr-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--devbr-primary-400);
+}
+
+/* Tema escuro para scrollbar */
+html.dark .devbr-scrollbar::-webkit-scrollbar-track {
+  background: var(--devbr-secondary-800);
+}
+
+html.dark .devbr-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--devbr-secondary-600);
+}
+
+html.dark .devbr-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--devbr-secondary-500);
+}
+
+/* Efeitos de foco amigáveis */
+.devbr-focus:focus {
+  outline: 2px solid var(--devbr-primary-400);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Texto com gradiente */
+.devbr-text-gradient {
+  background: linear-gradient(135deg, var(--devbr-primary-600), var(--devbr-accent-500));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+/* Bordas suaves */
+.devbr-border {
+  border: 1px solid var(--devbr-secondary-200);
+}
+
+html.dark .devbr-border {
+  border: 1px solid var(--devbr-secondary-700);
+}

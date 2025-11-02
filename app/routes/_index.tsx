@@ -7,8 +7,11 @@ import { Homepage } from '~/components/Homepage.client';
 
 export const meta: MetaFunction = () => {
   return [
-    { title: 'Chef by Convex | Generate realtime full‑stack apps' },
-    { name: 'description', content: 'Cook up something hot with Chef, the full-stack AI coding agent from Convex' },
+    { title: 'DevBr | Crie aplicações full-stack em tempo real com IA' },
+    {
+      name: 'description',
+      content: 'Desenvolva algo incrível com DevBr, o agente de IA para desenvolvimento full-stack brasileiro',
+    },
     {
       property: 'og:image',
       content: '/social_preview_index.png',
@@ -50,7 +53,7 @@ export default function Index() {
   */
 
   return (
-    <div className="flex size-full flex-col bg-bolt-elements-background-depth-1">
+    <div className="devbr-gradient-bg dark:devbr-gradient-bg-dark flex size-full flex-col bg-bolt-elements-background-depth-1">
       <Header />
       <ClientOnly>{() => <Homepage />}</ClientOnly>
     </div>

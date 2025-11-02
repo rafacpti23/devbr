@@ -14,7 +14,7 @@ export function DownloadButton() {
   return (
     <Button onClick={handleDownload} variant="neutral" size="xs">
       <DownloadIcon />
-      <span>Download Code</span>
+      <span>Baixar Código</span>
     </Button>
   );
 }

@@ -1,120 +1,509 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://chef.convex.dev/github-header-dark.svg">
-    <img alt="Chef by Convex'" src="https://chef.convex.dev/github-header-light.svg" width="600">
-  </picture>
-</p>
+# DevBr - Desenvolvimento Brasil 🇧🇷
 
-[Chef](https://chef.convex.dev) is the only AI app builder that knows backend. It builds full-stack web apps with a built-in database, zero config auth, file uploads,
-real-time UIs, and background workflows. If you want to check out the secret sauce that powers Chef, you can view or download the system prompt [here](https://github.com/get-convex/chef/releases/latest).
+<div align="center">
+  <img src="public/devbr-logo.svg" alt="DevBr Logo" width="200"/>
+  
+  **Agente de IA para Desenvolvimento Full-Stack Brasileiro**
+  
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![Node.js](https://img.shields.io/badge/Node.js-20+-green.svg)](https://nodejs.org/)
+  [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://docker.com/)
+  [![Português](https://img.shields.io/badge/Idioma-Português-green.svg)](README.md)
+</div>
 
-Chef's capabilities are enabled by being built on top of [Convex](https://convex.dev), the open-source reactive database designed to make life easy for web app developers. The "magic" in Chef is just the fact that it's using Convex's APIs, which are an ideal fit for codegen.
+---
 
-Development of the Chef is led by the Convex team. We
-[welcome bug fixes](./CONTRIBUTING.md) and
-[love receiving feedback](https://discord.gg/convex).
+## 🏢 Desenvolvido por
 
-This project is a fork of the `stable` branch of [bolt.diy](https://github.com/stackblitz-labs/bolt.diy).
+**Ramel Tecnologia**  
+**Autor:** Rafa Martins  
+**Site:** [ramelseg.com.br](https://ramelseg.com.br)  
+**Email:** rafa@ramelseg.com.br
 
-## Getting Started
+*Versão adaptada do Chef especialmente para desenvolvedores brasileiros*
 
-Visit our [documentation](https://docs.convex.dev/chef) to learn more about Chef and check out our prompting [guide](https://stack.convex.dev/chef-cookbook-tips-working-with-ai-app-builders).
+---
 
-The easiest way to build with Chef is through our hosted [webapp](https://chef.convex.dev), which includes a generous free tier. If you want to
-run Chef locally, you can follow the guide below.
+## 📋 Sobre o DevBr
 
-> [!IMPORTANT]
-> Chef is provided as-is, using an authentication configuration specific to Convex's internal control plane that manages user accounts.
+O DevBr é uma versão personalizada e traduzida para português brasileiro do Chef, um poderoso agente de IA para desenvolvimento full-stack. Esta adaptação foi criada especialmente para atender às necessidades da comunidade de desenvolvedores brasileiros, oferecendo:
 
-If you are planning on developing a fork of Chef for production use or re-distribution, your fork will need to replace the existing authentication system with your own. We recommend using the [OAuth Authorization Code Grant](https://docs.convex.dev/platform-apis/oauth-applications#implementing-oauth) flow to authorize access to Convex teams or projects. [Read more about available Platform APIs](https://docs.convex.dev/platform-apis).
+- ✅ **Interface 100% em português brasileiro**
+- ✅ **Design amigável com cores suaves**
+- ✅ **Templates e receitas adaptadas para o mercado brasileiro**
+- ✅ **Documentação completa em português**
+- ✅ **Suporte técnico em português**
 
-Chef is easy to use for local development without changes. Read on for instructions for using Chef locally.
+## 🚀 Instalação Rápida
 
-### Running Locally
-
-Note: This will use the hosted Convex control plane to provision Convex projects. However, Chef tokens used in this enviroment will not count towards usage in your Convex account.
-
-**1. Clone the project**
-
-Clone the GitHub respository and `cd` into the directory by running the following commands:
-
-```bash
-git clone https://github.com/get-convex/chef.git
-cd chef
-```
-
-**2. Set up local environment**
-
-Run the following commands in your terminal:
+### Opção 1: Instalação Automática (Recomendada)
 
 ```bash
-nvm install
-nvm use
-npm install -g pnpm
-pnpm i
-echo 'VITE_CONVEX_URL=placeholder' >> .env.local
-npx convex dev --once # follow the steps to create a Convex project in your team
+# Baixar e executar o instalador automático
+curl -fsSL https://raw.githubusercontent.com/rameltecnologia/devbr/main/install.sh | bash
 ```
 
-Note: `nvm` only works on Mac and Linux. If you are using Windows, you may have to find an alternative.
+O instalador automático irá:
+- ✅ Verificar dependências
+- ✅ Instalar o DevBr
+- ✅ Configurar proxy reverso (Nginx)
+- ✅ Configurar SSL/HTTPS
+- ✅ Criar serviço systemd
+- ✅ Iniciar automaticamente
 
-**3. Set up Chef OAuth application**
+### Opção 2: Instalação Manual
 
-Go to the Convex [dashboard](https://dashboard.convex.dev/team/settings/applications/oauth-apps) and create an OAuth application. The team you use to create the application will be the only team you can sign-in with on local Chef. Redirect URIs will not matter, but you can set one to http://127.0.0.1:5173 (or whatever port you’ll run the Chef UI on) so that the form can be submitted.
+```bash
+# Clonar o repositório
+git clone https://github.com/rameltecnologia/devbr.git
+cd devbr
 
-**4. Set up Convex deployment**
+# Instalar dependências
+npm install
 
-Use `npx convex dashboard` to open the Convex [dashboard](https://dashboard.convex.dev) and go to Settings → Environment Variables. Then, set the following environment variables:
+# Configurar ambiente
+cp .env.example .env.local
+
+# Iniciar em desenvolvimento
+npm run dev
+
+# Ou iniciar em produção
+npm run build
+npm start
+```
+
+### Opção 3: Docker Compose
+
+```bash
+# Clonar o repositório
+git clone https://github.com/rameltecnologia/devbr.git
+cd devbr
+
+# Configurar variáveis de ambiente
+cp .env.example .env
+
+# Iniciar com Docker Compose
+docker-compose up -d
+```
+
+### Opção 4: Docker Swarm (Produção)
+
+```bash
+# Baixar e executar o deploy para Swarm
+curl -fsSL https://raw.githubusercontent.com/rameltecnologia/devbr/main/docker-swarm-deploy.sh | bash
+```
+
+---
+
+## 🛠️ Configuração
+
+### Variáveis de Ambiente
+
+Crie um arquivo `.env.local` com as seguintes configurações:
 
 ```env
-BIG_BRAIN_HOST=https://api.convex.dev
-CONVEX_OAUTH_CLIENT_ID=<value from oauth setup>
-CONVEX_OAUTH_CLIENT_SECRET=<value from oauth setup>
-WORKOS_CLIENT_ID=<value from .env.development>
+# Configurações básicas
+NODE_ENV=production
+PORT=3000
+VITE_APP_DOMAIN=seu-dominio.com.br
+
+# Configurações do Convex (obrigatório)
+VITE_CONVEX_URL=https://seu-projeto.convex.cloud
+CONVEX_DEPLOYMENT=seu-deployment
+CONVEX_OAUTH_CLIENT_ID=seu-client-id
+
+# Configurações do WorkOS (autenticação)
+VITE_WORKOS_CLIENT_ID=seu-workos-client-id
+WORKOS_REDIRECT_URI=https://seu-dominio.com.br/auth/callback
+
+# Configurações opcionais
+REDIS_URL=redis://localhost:6379
+DATABASE_URL=postgresql://user:pass@localhost:5432/devbr
 ```
 
-**5. Add API keys for model providers**
+### Configuração do Proxy Reverso
 
-Add any of the following API keys in your `.env.local` to enable code generation:
+O instalador automático configura o Nginx automaticamente. Para configuração manual:
 
-```env
-ANTHROPIC_API_KEY=<your api key>
-GOOGLE_API_KEY=<your api key>
-OPENAI_API_KEY=<your api key>
-XAI_API_KEY=<your api key>
+```nginx
+server {
+    listen 80;
+    server_name seu-dominio.com.br;
+    
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
 ```
 
-Note: You can also add your own API keys through the Chef settings page.
+---
 
-**6. Run Chef backend and frontend**
+## 🐳 Docker
 
-Run the following commands in your terminal:
+### Construir Imagem
 
 ```bash
-pnpm run dev
-
-## in another terminal
-npx convex dev
+docker build -t rameltecnologia/devbr:latest .
 ```
 
-Congratulations, you now have Chef running locally! You can log in to Chef with your existing Convex account.
+### Executar Container
 
-Note: Chef is accessible at http://127.0.0.1:{port}/ and will not work properly on http://localhost:{port}/.
+```bash
+docker run -d \
+  --name devbr \
+  -p 3000:3000 \
+  -e NODE_ENV=production \
+  -e VITE_APP_DOMAIN=seu-dominio.com.br \
+  rameltecnologia/devbr:latest
+```
 
-## Repository Layout
+### Docker Compose Completo
 
-- `app/` contains all of the client side code and some serverless APIs.
+```yaml
+version: '3.8'
 
-  - `components/` defines the UI components
-  - `lib/` contains client-side logic for syncing local state with the server
-  - `routes/` defines some client and server routes
+services:
+  devbr:
+    image: rameltecnologia/devbr:latest
+    container_name: devbr-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - VITE_APP_DOMAIN=seu-dominio.com.br
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
-- `chef-agent/` handles the agentic loop by injecting system prompts, defining tools, and calling out to model providers.
+  nginx:
+    image: nginx:alpine
+    container_name: devbr-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - devbr
+```
 
-- `chefshot/` defines a CLI interface for interacting with the Chef webapp.
+---
 
-- `convex/` contains the database that stores chats and user metadata.
+## 🔧 Comandos Úteis
 
-- `template/` contains the template that we use to start all Chef projects.
+### Desenvolvimento
 
-- `test-kitchen/` contains a test harness for the Chef agent loop.
+```bash
+# Instalar dependências
+npm install
+
+# Iniciar em modo desenvolvimento
+npm run dev
+
+# Executar testes
+npm test
+
+# Verificar tipos
+npm run typecheck
+
+# Lint e formatação
+npm run lint
+npm run lint:fix
+```
+
+### Produção
+
+```bash
+# Build para produção
+npm run build
+
+# Iniciar em produção
+npm start
+
+# Verificar status do serviço
+sudo systemctl status devbr
+
+# Ver logs
+sudo journalctl -u devbr -f
+
+# Reiniciar serviço
+sudo systemctl restart devbr
+```
+
+### Docker
+
+```bash
+# Ver logs do container
+docker logs devbr-app -f
+
+# Entrar no container
+docker exec -it devbr-app sh
+
+# Verificar saúde do container
+docker inspect devbr-app | grep Health
+
+# Atualizar imagem
+docker pull rameltecnologia/devbr:latest
+docker-compose up -d
+```
+
+### Docker Swarm
+
+```bash
+# Ver serviços
+docker stack services devbr
+
+# Ver containers
+docker stack ps devbr
+
+# Escalar serviço
+docker service scale devbr_devbr=3
+
+# Ver logs
+docker service logs devbr_devbr -f
+
+# Atualizar serviço
+docker service update devbr_devbr
+
+# Remover stack
+docker stack rm devbr
+```
+
+---
+
+## 🎨 Personalização
+
+### Cores e Tema
+
+O DevBr utiliza um esquema de cores amigável inspirado no design Lovable:
+
+- **Verde primário:** `#22c55e` (confiança e crescimento)
+- **Laranja accent:** `#f97316` (energia e criatividade)
+- **Tons neutros:** Para melhor legibilidade
+
+### Modificar Cores
+
+Edite o arquivo `app/styles/variables.css`:
+
+```css
+:root {
+  --devbr-primary-500: #22c55e;
+  --devbr-accent-500: #f97316;
+  --devbr-secondary-500: #64748b;
+}
+```
+
+### Adicionar Receitas
+
+Edite `app/components/chat/MessageInput.tsx` para adicionar novas receitas:
+
+```tsx
+<MenuItemComponent action={() => insertTemplate('Sua nova receita...')}>
+  <div className="flex w-full items-center gap-2">
+    <SeuIcon className="size-4 text-content-secondary" />
+    Nome da Receita
+  </div>
+</MenuItemComponent>
+```
+
+---
+
+## 🔒 Segurança
+
+### SSL/HTTPS
+
+O instalador automático configura SSL usando Let's Encrypt. Para configuração manual:
+
+```bash
+# Instalar Certbot
+sudo apt install certbot python3-certbot-nginx
+
+# Obter certificado
+sudo certbot --nginx -d seu-dominio.com.br
+
+# Renovação automática
+sudo crontab -e
+# Adicionar: 0 12 * * * /usr/bin/certbot renew --quiet
+```
+
+### Firewall
+
+```bash
+# Configurar UFW
+sudo ufw allow ssh
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+sudo ufw enable
+```
+
+### Backup
+
+```bash
+# Backup dos dados
+tar -czf devbr-backup-$(date +%Y%m%d).tar.gz \
+  ~/devbr/data \
+  ~/devbr/.env.local \
+  /etc/nginx/sites-available/devbr
+
+# Backup do banco (se usando PostgreSQL)
+pg_dump devbr > devbr-db-backup-$(date +%Y%m%d).sql
+```
+
+---
+
+## 📊 Monitoramento
+
+### Health Check
+
+O DevBr inclui um endpoint de saúde:
+
+```bash
+curl http://localhost:3000/api/health
+```
+
+### Logs
+
+```bash
+# Logs da aplicação
+tail -f ~/devbr/logs/app.log
+
+# Logs do sistema
+sudo journalctl -u devbr -f
+
+# Logs do Nginx
+sudo tail -f /var/log/nginx/access.log
+sudo tail -f /var/log/nginx/error.log
+```
+
+### Métricas
+
+Para monitoramento avançado, considere usar:
+
+- **Prometheus + Grafana**
+- **ELK Stack (Elasticsearch, Logstash, Kibana)**
+- **New Relic ou DataDog**
+
+---
+
+## 🆘 Solução de Problemas
+
+### Problemas Comuns
+
+**1. Porta já em uso**
+```bash
+# Verificar qual processo está usando a porta
+sudo lsof -i :3000
+
+# Parar o processo
+sudo kill -9 PID
+```
+
+**2. Permissões de arquivo**
+```bash
+# Corrigir permissões
+sudo chown -R $USER:$USER ~/devbr
+chmod +x ~/devbr/install.sh
+```
+
+**3. Problemas de SSL**
+```bash
+# Verificar certificados
+sudo certbot certificates
+
+# Renovar certificados
+sudo certbot renew --dry-run
+```
+
+**4. Container não inicia**
+```bash
+# Verificar logs
+docker logs devbr-app
+
+# Verificar recursos
+docker stats devbr-app
+
+# Reiniciar container
+docker restart devbr-app
+```
+
+### Logs de Debug
+
+Para ativar logs detalhados:
+
+```bash
+# Definir nível de log
+export LOG_LEVEL=debug
+
+# Ou no .env.local
+echo "LOG_LEVEL=debug" >> .env.local
+```
+
+---
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas! Para contribuir:
+
+1. **Fork** o repositório
+2. **Crie** uma branch para sua feature (`git checkout -b feature/nova-feature`)
+3. **Commit** suas mudanças (`git commit -am 'Adiciona nova feature'`)
+4. **Push** para a branch (`git push origin feature/nova-feature`)
+5. **Abra** um Pull Request
+
+### Diretrizes
+
+- Mantenha o código em português nos comentários
+- Siga os padrões de código existentes
+- Adicione testes para novas funcionalidades
+- Atualize a documentação quando necessário
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+---
+
+## 🙏 Agradecimentos
+
+- **Convex Team** - Pela plataforma incrível
+- **Chef Team** - Pelo projeto original
+- **Comunidade brasileira de desenvolvedores** - Pelo feedback e suporte
+
+---
+
+## 📞 Suporte
+
+Para suporte técnico:
+
+- **Email:** rafa@ramelseg.com.br
+- **Site:** [ramelseg.com.br](https://ramelseg.com.br)
+- **Issues:** [GitHub Issues](https://github.com/rameltecnologia/devbr/issues)
+
+---
+
+<div align="center">
+  <p><strong>DevBr - Desenvolvendo o futuro do Brasil, uma linha de código por vez! 🚀🇧🇷</strong></p>
+  
+  <p>
+    <a href="https://ramelseg.com.br">
+      <img src="https://img.shields.io/badge/Ramel-Tecnologia-blue?style=for-the-badge" alt="Ramel Tecnologia"/>
+    </a>
+  </p>
+</div>

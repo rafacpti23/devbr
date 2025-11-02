@@ -107,31 +107,31 @@ export function DeployButton() {
   let icon: React.ReactNode;
   switch (status.type) {
     case 'idle':
-      buttonText = 'Deploy';
+      buttonText = 'Publicar';
       icon = <RocketIcon />;
       break;
     case 'building':
-      buttonText = 'Building...';
+      buttonText = 'Construindo...';
       icon = <Spinner />;
       break;
     case 'zipping':
-      buttonText = 'Creating package...';
+      buttonText = 'Empacotando...';
       icon = <Spinner />;
       break;
     case 'deploying':
-      buttonText = 'Deploying...';
+      buttonText = 'Publicando...';
       icon = <Spinner />;
       break;
     case 'error':
-      buttonText = 'Deploy';
+      buttonText = 'Publicar';
       icon = <RocketIcon />;
       break;
     case 'success': {
       if (status.updateCounter === currentCounter) {
-        buttonText = 'Deployed';
+        buttonText = 'Publicado';
         icon = <CheckIcon className="text-bolt-elements-icon-success" />;
       } else {
-        buttonText = 'Redeploy';
+        buttonText = 'Republicar';
         icon = <UpdateIcon />;
       }
       break;
@@ -150,9 +150,9 @@ export function DeployButton() {
         tip={(() => {
           switch (status.type) {
             case 'idle':
-              return 'Click to deploy your application';
+              return 'Clique para publicar sua aplicação';
             case 'success':
-              return 'Click to deploy again';
+              return 'Clique para publicar novamente';
             default:
               return undefined;
           }
@@ -167,7 +167,7 @@ export function DeployButton() {
           size="xs"
           icon={<ExternalLinkIcon />}
         >
-          View site
+          Ver site
         </Button>
       )}
     </div>
